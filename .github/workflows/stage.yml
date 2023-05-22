@@ -13,7 +13,7 @@ jobs:
         with:
           # Deploy vars
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.CLEARLOGIC_SSHG_KEY_PRIVATE }}
-          WPE_ENV: qorpstg
+          WPE_ENV: clearlogicstg
           # Deploy Options
           REMOTE_PATH: "wp-content/"
           PHP_LINT: TRUE
