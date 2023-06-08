@@ -15405,4 +15405,64 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   border: 1px solid #e9ecef;
 }
 
+#main-nav {
+  background-color: #fff;
+}
+#main-nav .navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: #8ECAE6;
+  border: var(--bs-border-width) solid #8ECAE6;
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+#main-nav .navbar-toggler:hover {
+  color: white;
+  background-color: #023047;
+  border-color: #023047;
+}
+#main-nav .navbar-brand span {
+  color: #023047;
+  font-family: "Craftwork Grotesk";
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+#main-nav .navbar-brand span:hover {
+  color: #FB8500;
+}
+@media (max-width: 991.98px) {
+  #main-nav .navbar-brand span {
+    display: none;
+  }
+}
+#main-nav .nav-link {
+  color: #219EBC;
+}
+#main-nav .nav-link:hover {
+  color: #FB8500;
+}
+#main-nav .current-menu-item .nav-link {
+  color: #FB8500;
+  font-weight: 800;
+}
+
+.footer {
+  background-color: #023047;
+}
+.footer h4, .footer .h4 {
+  color: #219EBC;
+}
+.footer p {
+  color: white;
+}
+.footer a {
+  color: #FB8500;
+}
+.footer a:hover {
+  color: #FFB703;
+}
+
 /*# sourceMappingURL=child-theme.css.map */

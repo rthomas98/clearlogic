@@ -1,0 +1,51 @@
+#main-nav {
+  background-color: $white;
+
+  .navbar-toggler {
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color: var(--bs-navbar-color);
+    background-color: $light-blue;
+    border: var(--bs-border-width) solid $light-blue;
+    border-radius: var(--bs-navbar-toggler-border-radius);
+    transition: var(--bs-navbar-toggler-transition);
+
+    &:hover {
+      color: white;
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+    }
+  }
+
+  .navbar-brand span {
+    color: $dark-blue;
+    font-family: "Craftwork Grotesk";
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $orange;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+    .nav-link {
+        color: $mid-blue;
+
+        &:hover {
+        color: $orange;
+        }
+    }
+
+  .current-menu-item {
+    .nav-link {
+      color: $orange;
+      font-weight: 800;
+    }
+  }
+}

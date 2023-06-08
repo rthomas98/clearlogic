@@ -1,0 +1,19 @@
+.footer {
+  background-color: $dark-blue;
+
+  h4 {
+    color: $mid-blue;
+  }
+
+  p {
+    color: white;
+  }
+
+  a {
+    color: $orange;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

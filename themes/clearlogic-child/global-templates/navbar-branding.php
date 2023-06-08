@@ -20,10 +20,9 @@ if ( ! has_custom_logo() ) { ?>
 		</h1>
 
 	<?php else : ?>
-
-		<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
-			<?php bloginfo( 'name' ); ?>
-		</a>
+        <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
+            <img class="" src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo-icon.png" alt="Clear Logic Logo" width="40"> <span>Clear Logic</span>
+        </a>
 
 	<?php endif; ?>
 
