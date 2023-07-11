@@ -40,8 +40,12 @@ function theme_enqueue_styles() {
 	
 	$css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_styles );
 
+    wp_enqueue_style('icomoon', get_stylesheet_directory_uri() . '/css/icomoon.css', array(), '1.0.0');
 	wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version );
-	wp_enqueue_script( 'jquery' );
+
+    wp_enqueue_script('jquery-sticky', get_stylesheet_directory_uri() . '/src/js/jquery.sticky.js', array('jquery'), '1.0.4', true);
+    wp_enqueue_script('owl-carousel', get_stylesheet_directory_uri() . '/src/js/owl.carousel.min.js', array('jquery'), '2.3.4', true);
+    wp_enqueue_script( 'jquery' );
 	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
 	
@@ -92,3 +96,40 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+/**
+ * Add Font Awesome Pro
+ */
+
+function add_font_awesome_pro() {
+    wp_enqueue_script( 'font-awesome-pro', 'https://kit.fontawesome.com/3529cf9057.js', array(), null ); // replace 'your-kit-code' with your actual kit code
+}
+add_action( 'wp_enqueue_scripts', 'add_font_awesome_pro' );
+
+/**
+ * Add ACF Options Page
+ */
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Header Settings',
+        'menu_title'    => 'Header',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Footer Settings',
+        'menu_title'    => 'Footer',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+
+}
